@@ -1,6 +1,7 @@
 python-decouple
-telethon
+Telethon
 heroku3
 heroku
+python-dotenv
 asyncio
-
+TgCrypto
