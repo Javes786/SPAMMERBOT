@@ -2,7 +2,7 @@ import asyncio
 from asyncio import wait
 from telethon import events
 from .. import BotzHub
-
+from . import *
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/ding"))
 async def _(event):
