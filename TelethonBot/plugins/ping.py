@@ -1,5 +1,8 @@
 from datetime import datetime
 from .. import BotzHub
+import asyncio
+from asyncio import wait
+from telethon import events
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/ping"))
 async def _(event):
