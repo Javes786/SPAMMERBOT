@@ -7,7 +7,7 @@ from telethon import events
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
 
-    if not e.text[0].isalpha() and e.text[0] not in (".", "#", "@", "!"):
+    if not e.text[0].isalpha():
 
         message = e.text
 
