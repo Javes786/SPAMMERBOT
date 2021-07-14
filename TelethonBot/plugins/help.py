@@ -16,5 +16,9 @@ async def helper(event):
                      buttons=[
                          [Button.url("Channel", url="https://t.me/Javes2Support")],
                          [Button.url("Repository", url="https://github.com/Javes786")],
-                         [Button.inline("Fuck", data="Fucking You")]
+                         [Button.inline("Fuck", data="2")]
                      ])
+
+@BotzHub.on(events.callbackquery.CallbackQuery(data="2"))
+async def ex(event):
+    await event.edit("SoRRY , Because There is No BacK Button Adding Soon")
