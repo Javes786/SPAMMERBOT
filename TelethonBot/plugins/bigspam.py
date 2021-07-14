@@ -12,7 +12,7 @@ LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
-        counter = int(message[09:20])
+        counter = int(message[9:20])
         spam_message = str(e.text[20:])
         for i in range(1, counter):
             await e.respond(spam_message)
