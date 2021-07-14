@@ -2,3 +2,5 @@ python-decouple
 telethon
 heroku3
 heroku
+asyncio
+
