@@ -1,3 +1,9 @@
+import asyncio
+
+from asyncio import wait
+
+from telethon import events
+
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
 
