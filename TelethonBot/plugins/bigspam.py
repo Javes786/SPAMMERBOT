@@ -4,6 +4,9 @@ from asyncio import wait
 
 from telethon import events
 
+LOGGER = os.environ.get("LOGGER", -1001547166512)
+
+
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
