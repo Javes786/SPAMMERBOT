@@ -6,9 +6,9 @@ python-dotenv
 asyncio
 TgCrypto
 
-Telegram
+
 time
 requests
-numpy
+
 pyGithub
 Pillow
