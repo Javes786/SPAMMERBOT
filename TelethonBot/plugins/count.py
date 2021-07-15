@@ -12,15 +12,15 @@ from telethon import events, Button
 from telethon import TelegramClient as BotzHub
 
 
-@BotzHub(events.NewMessage(incoming=True, pattern="/count"))
-async def _(count):    
+@BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
+async def count(event):    
     u = 0
     g = 0
     c = 0
     bc = 0
     b = 0
     result = ""
-    await count.edit("`Processing...`")
+    await event.edit("`Processing...`")
     dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
@@ -39,4 +39,4 @@ async def _(count):
     result += f"`Groups:`\t**{g}**\n"
     result += f"`Super Groups:`\t**{c}**\n"
     result += f"`Channels:`\t**{bc}**"
-    await count.edit(result)
+    await event.edit(result)
