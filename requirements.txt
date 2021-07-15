@@ -5,4 +5,10 @@ heroku
 python-dotenv
 asyncio
 TgCrypto
-datetime
+date
+Telegram
+time
+requests
+numpy
+pyGithub
+Pillow
