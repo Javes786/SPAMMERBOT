@@ -1,7 +1,7 @@
 # By < @xditya >
 # // @BotzHub //
 
-from telethon import TelegramClient
+from telethon import TelegramClient, events
 from decouple import config
 import logging
 import time
@@ -13,5 +13,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
+SUDO_USERS = config("SUDO_USERS", default=None)
+
 
 BotzHub = TelegramClient('BotzHub', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
