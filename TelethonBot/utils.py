@@ -4,6 +4,7 @@
 import sys
 import logging
 import importlib
+from telethon import TelegramClient, events
 from pathlib import Path
 
 def load_plugins(plugin_name):
