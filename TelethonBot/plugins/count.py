@@ -20,8 +20,8 @@ async def count(event):
     bc = 0
     b = 0
     result = ""
-    await event.edit("`Processing...`")
-    dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
+    await count.edit("`Processing...`")
+    dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
         if isinstance(currrent_entity, User):
@@ -39,4 +39,4 @@ async def count(event):
     result += f"`Groups:`\t**{g}**\n"
     result += f"`Super Groups:`\t**{c}**\n"
     result += f"`Channels:`\t**{bc}**"
-    await event.edit(result)
+    await count.edit(result)
