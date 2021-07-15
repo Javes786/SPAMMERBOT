@@ -12,7 +12,7 @@ from telethon import events, Button
 from telethon import TelegramClient as BotzHub
 
 
-@BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
+@BotzHub(events.NewMessage(incoming=True, pattern="/count"))
 async def _(count):    
     u = 0
     g = 0
