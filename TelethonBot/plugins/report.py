@@ -3,6 +3,8 @@ from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient as  BotzHub
 from .. import BotzHub 
+from telethon import bot 
+#needed for bot 
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/report"))
 async def _(event):
