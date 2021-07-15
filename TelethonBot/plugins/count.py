@@ -1,5 +1,5 @@
 
-
+import asyncio
 import os
 from telethon.errors import ImageProcessFailedError, PhotoCropSizeSmallError
 from telethon.errors.rpcerrorlist import (PhotoExtInvalidError,UsernameOccupiedError)
