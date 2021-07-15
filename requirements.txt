@@ -5,7 +5,7 @@ heroku
 python-dotenv
 asyncio
 TgCrypto
-date
+
 Telegram
 time
 requests
