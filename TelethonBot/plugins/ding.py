@@ -1,5 +1,5 @@
 import asyncio
-from asyncio import wait
+from asyncio import await
 from telethon import events
 from .. import BotzHub
 from . import *
