@@ -12,8 +12,8 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-    MYID = [BOT_USER]
- if not sender.id in MYID:
+    MYID = [511112479]
+    if not sender.id in MYID:
       return await e.send("U Are Not MY Owner")
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
