@@ -12,9 +12,13 @@ from telethon import events, Button
 from telethon import TelegramClient as ATGK
 from telethon import logging
 from .. import *
+from decouple import config
+import time 
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
+
+ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/count"))
    async def count(event):   
