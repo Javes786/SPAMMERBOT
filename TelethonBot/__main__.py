@@ -6,7 +6,7 @@ from pathlib import Path
 from TelethonBot.utils import load_plugins
 import logging
 from . import ATGK
-from telethon import TelegramClient as ATGK
+
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
