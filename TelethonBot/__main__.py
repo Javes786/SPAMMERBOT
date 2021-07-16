@@ -1,11 +1,12 @@
-# By < @xditya >
-# // @BotzHub //
+# By < MOHAMMAD AMAAN >
+# // SPAMMERBOT MADE BY @CRIMINAL786 //
 
 import glob
 from pathlib import Path
 from TelethonBot.utils import load_plugins
 import logging
-from . import BotzHub
+from . import ATGK
+from telethon import TelegramClient as ATGK
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -18,8 +19,8 @@ for name in files:
         plugin_name = patt.stem
         load_plugins(plugin_name.replace(".py", ""))
 
-print("Successfully deployed!")
-print("Enjoy! Do visit @BotzHub")
+print("SUCCESSFULLY DEPLOYED!")
+print("Enjoy! SPAMMER BOT MADE BY @CRIMINAL786 (MOHAMMAD AMAAN)")
 
 if __name__ == "__main__":
-    BotzHub.run_until_disconnected()
+    ATGK.run_until_disconnected()
