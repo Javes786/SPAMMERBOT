@@ -4,6 +4,7 @@ from .. import ATGK
 from asyncio import wait
 from telethon.events import ChatAction
 from telethon import events
+from telethon import sender.id
 
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
