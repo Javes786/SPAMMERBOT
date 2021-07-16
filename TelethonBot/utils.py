@@ -1,5 +1,5 @@
-# By < @xditya >
-# // @BotzHub //
+# By < MOHAMMAD AMAAN >
+# // SPAMMERBOT MADE BY @CRIMINAL786 //
 
 import sys
 import logging
@@ -15,4 +15,4 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["TelethonBot.plugins." + plugin_name] = load
-    print("TelethonBot has Imported " + plugin_name)
+    print("SPAMMER BOT has IMPoRTED" + plugin_name)
