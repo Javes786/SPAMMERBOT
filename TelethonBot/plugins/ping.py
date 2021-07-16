@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 from telethon import events
-from .. import ATGK
+from .. import ATGK, Lastupdate
 
 
 
