@@ -1,1 +1,1 @@
-BotzHub: python -m TelethonBot
+ATGK: python -m TelethonBot
