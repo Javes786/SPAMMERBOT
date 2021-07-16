@@ -7,21 +7,22 @@ from telethon.tl.functions.account import (UpdateProfileRequest,UpdateUsernameRe
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 from telethon.tl.functions.photos import (DeletePhotosRequest,GetUserPhotosRequest,UploadProfilePhotoRequest)
 from telethon.tl.types import InputPhoto, MessageMediaPhoto, User, Chat, Channel
-from .. import BotzHub
+from .. import ATGK
 from telethon import events, Button
-from telethon import TelegramClient as BotzHub
+from telethon import TelegramClient as ATGK
 from telethon import logging
+from .. import *
 
-@BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
-   async def _(event):
-    await:    
+@ATGK.on(events.NewMessage(incoming=True, pattern="/count"))
+   async def count(event):
+    await (event):    
     u = 0
     g = 0
     c = 0
     bc = 0
     result = ""
     await event.edit("`Processing...`")
-    dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
+    dialogs = await ATGK.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
         if isinstance(currrent_entity, User):
