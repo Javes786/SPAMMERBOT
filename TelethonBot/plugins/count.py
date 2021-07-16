@@ -15,16 +15,21 @@ from telethon import TelegramClient as BotzHub
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
 async def count(event):
     if not event.text[0].isalpha() and event.text[0] not in ("#", "@", "!"):    
+    async def count(event):    
     u = 0
     g = 0
     c = 0
     bc = 0
+    b = 0
     result = ""
     await event.edit("`Processing...`")
-    dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
+    dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
         if isinstance(currrent_entity, User):
+            if currrent_entity.bot:
+                b += 1
+            else:
                 u += 1
         elif isinstance(currrent_entity, Chat):
             g += 1
@@ -38,5 +43,6 @@ async def count(event):
     result += f"`Users:`\t**{u}**\n"
     result += f"`Groups:`\t**{g}**\n"
     result += f"`Super Groups:`\t**{c}**\n"
-    result += f"`Channels:`\t**{bc}**"
+    result += f"`Channels:`\t**{bc}**\n"
+    result += f"`Bots:`\t**{b}**"
     await event.edit(result)
