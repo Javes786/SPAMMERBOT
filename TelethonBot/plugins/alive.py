@@ -4,7 +4,7 @@ from .. import ATGK
 import asyncio
 currentversion = "ONLY ONE"
 
-ALIVE_NAME = os.environ.get("ALIVE_NAME", HACKER PREM)
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "HACKER PREM")
 PM_IMG = os.environ.get("PM_IMG", None)
 
 ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
