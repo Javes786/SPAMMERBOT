@@ -1,4 +1,4 @@
-
+from TelethonBot import __init__
 import asyncio
 import os
 from telethon.errors import ImageProcessFailedError, PhotoCropSizeSmallError
