@@ -1,15 +1,14 @@
-# Telethon Bot
-Simple base used to make a Telegram Bot in [telethon](https://github.com/LonamiWebs/Telethon).
-   
-Join [@BotzHub](https://t.me/BotzHub)!
-    
-Note: The `client`, here, is named `BotzHub`.
-   
-Fork and add your plugins to [TelethonBot/plugins](./TelethonBot/plugins), and, thats it!
+# SPAMMER BOT
+A PERSONAL SPAMMING BOT MADE FOR [HACKER PREM](https://t.me/hackerprem) MADE BY [MOHAMMAD AMAAN](https://t.me/criminal786).
 
-# Deploying
+JOIN MY [GROUP](https://t.me/javesgroup) FOR BUSSINESS QUERIES.
+
+# DEPLOY ON HEROKU
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Javes786/SPAMMERBOT)
 
 # Credits
-- [Telethon.](https://github.com/LonamiWebs/Telethon)
-- [Me.](https://t.me/xditya)
+- THANKS [ADITYA](https://t.me/xditya) FOR TELETHON BOT BASE.
+- PLUGINS READY BY [MOHAMMAD AMAAN](https://t.me/criminal786).
+
+# WARNING
+DON'T REMOVE ANY LINES ELSE BOT WILL NOT WORK.
