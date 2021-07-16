@@ -1,6 +1,6 @@
 import asyncio
 import os
-from .. import BotzHub
+from .. import ATGK
 from asyncio import wait
 
 from telethon import events
@@ -8,7 +8,7 @@ from telethon import events
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 
-@BotzHub.on(events.NewMessage(incoming=True, pattern="/bigspam"))
+@ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
@@ -24,7 +24,7 @@ async def bigspam(e):
                 "Bigspam was executed successfully"
                 )
 
-@BotzHub.on(events.NewMessage(incoming=True, pattern="/spam"))
+@ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
