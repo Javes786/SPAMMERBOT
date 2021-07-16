@@ -33,7 +33,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@ATGK.on(events.NewMessage(pattern="^/ping", func=lambda e: e.sender_id == bot.uid))
+@ATGK.on(events.NewMessage(incoming=True, pattern="^/ping"))
 async def ping(event):
     start = datetime.now()
     end = datetime.now()
