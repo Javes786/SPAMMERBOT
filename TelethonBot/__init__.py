@@ -10,6 +10,10 @@ from telethon import TelegramClient as ATGK
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
+Lastupdate = time.time()
+yoo = logging.getLogger("WARNING")
+yooprint = logging.getLogger("WARNING")
+
 # Basics
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
