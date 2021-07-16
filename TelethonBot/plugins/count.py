@@ -13,6 +13,9 @@ from telethon import TelegramClient as ATGK
 from telethon import logging
 from .. import *
 
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.WARNING)
+
 @ATGK.on(events.NewMessage(incoming=True, pattern="/count"))
    async def count(event):   
     u = 0
