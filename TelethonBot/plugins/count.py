@@ -14,13 +14,13 @@ from telethon import logging
 from .. import *
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/count"))
-   async def count(e):   
+   async def count(event):   
     u = 0
     g = 0
     c = 0
     bc = 0
     result = ""
-    await e.edit("`Processing...`")
+    await event.edit("`Processing...`")
     dialogs = await ATGK.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
@@ -39,4 +39,4 @@ from .. import *
     result += f"`Groups:`\t**{g}**\n"
     result += f"`Super Groups:`\t**{c}**\n"
     result += f"`Channels:`\t**{bc}**"
-    await e.edit(result)
+    await event.edit(result)
