@@ -19,7 +19,6 @@ async def count(event):
     g = 0
     c = 0
     bc = 0
-    b = 0
     result = ""
     await event.edit("`Processing...`")
     dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
