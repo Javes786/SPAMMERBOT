@@ -8,7 +8,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", "HACKER PREM")
 PM_IMG = os.environ.get("PM_IMG", None)
 
 ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
-PM_IMG = ""
+PM_IMG = "https://telegra.ph/file/9a55abc7b250a0b9ae7f9.jpg"
 pm_caption = "➥ **SPAMMER IS:** `ONLINE`\n\n"
 pm_caption += "➥ **Python:** `3.9.6` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
