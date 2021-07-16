@@ -13,7 +13,8 @@ from telethon import TelegramClient as BotzHub
 
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
-async def count(event):    
+async def count(event):
+    if not event.text[0].isalpha() and event.text[0] not in ("#", "@", "!"):    
     u = 0
     g = 0
     c = 0
