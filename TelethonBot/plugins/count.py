@@ -10,11 +10,9 @@ from telethon.tl.types import InputPhoto, MessageMediaPhoto, User, Chat, Channel
 from .. import BotzHub
 from telethon import events, Button
 from telethon import TelegramClient as BotzHub
-
+from telethon import logging
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
-async def count(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("#", "@", "!"):    
     async def count(event):    
     u = 0
     g = 0
