@@ -13,7 +13,7 @@ from telethon import TelegramClient as BotzHub
 from telethon import logging
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
-   async def count(event):
+   async def _(event):
     await:    
     u = 0
     g = 0
