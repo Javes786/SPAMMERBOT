@@ -1,10 +1,11 @@
-# By < @xditya >
-# // @BotzHub //
+# By < MOHAMMAD AMAAN >
+# // SPAMMERBOT MADE BY @CRIMINAL786 //
 
 from telethon import TelegramClient, events
 from decouple import config
 import logging
 import time
+from telethon import TelegramClient as ATGK
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -16,4 +17,4 @@ BOT_TOKEN = config("BOT_TOKEN", default=None)
 SUDO_USERS = config("SUDO_USERS", default=None)
 
 
-BotzHub = TelegramClient('BotzHub', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
+ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
