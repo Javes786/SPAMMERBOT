@@ -13,21 +13,18 @@ from telethon import TelegramClient as BotzHub
 from telethon import logging
 
 @BotzHub.on(events.NewMessage(incoming=True, pattern="/count"))
-    async def count(event):    
+   async def count(event):
+    await:    
     u = 0
     g = 0
     c = 0
     bc = 0
-    b = 0
     result = ""
     await event.edit("`Processing...`")
-    dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
+    dialogs = await BotzHub.get_dialogs(limit=None, ignore_migrated=True)
     for d in dialogs:
         currrent_entity = d.entity
         if isinstance(currrent_entity, User):
-            if currrent_entity.bot:
-                b += 1
-            else:
                 u += 1
         elif isinstance(currrent_entity, Chat):
             g += 1
@@ -41,6 +38,5 @@ from telethon import logging
     result += f"`Users:`\t**{u}**\n"
     result += f"`Groups:`\t**{g}**\n"
     result += f"`Super Groups:`\t**{c}**\n"
-    result += f"`Channels:`\t**{bc}**\n"
-    result += f"`Bots:`\t**{b}**"
+    result += f"`Channels:`\t**{bc}**"
     await event.edit(result)
