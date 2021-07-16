@@ -15,4 +15,4 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["TelethonBot.plugins." + plugin_name] = load
-    print("SPAMMER BOT has IMPoRTED" + plugin_name)
+    print("SPAMMER BOT has IMPoRTED " + plugin_name)
