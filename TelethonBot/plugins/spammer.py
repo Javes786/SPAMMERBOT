@@ -15,7 +15,7 @@ async def bigspam(e):
     sender = await e.get_sender()
     MYID = [ BOT_USER ]
     if not sender.id in MYID:
-      return await e.send_message("U Are Not MY Owner")
+      return await e.client.send_message("U Are Not MY Owner")
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         counter = int(message[9:13])
