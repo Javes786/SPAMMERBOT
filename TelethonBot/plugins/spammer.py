@@ -11,7 +11,7 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-       await e.sender = [ BOT_USER ]
+       [ BOT_USER ] = await e.get_sender
      if BOT_USER:
                 pass
    else:
