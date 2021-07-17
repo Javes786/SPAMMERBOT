@@ -2,7 +2,6 @@ import asyncio
 import os
 from .. import ATGK
 from asyncio import wait
-from telethon.events import ChatAction
 from telethon import events
 
 
