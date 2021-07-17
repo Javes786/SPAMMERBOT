@@ -8,20 +8,14 @@ from telethon import events
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 BOT_USER = os.environ.get("BOT_USER", 511112479)
-BOT_USER = vv
 
-@ATGK.on(events.NewMessage(incoming=True, pattern="^/bigspam"))
+
+@ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-                     vv = await e.get_sender()
-      if sender.id in vv:
-                pass
-   else:
-       return await e.reply("`U ARE NOT MY OWNER`")
-  try:
-       await e.delete()
-  except:
-         pass
-
+                     users = [BOT_USER]
+if not event.sender_id in users:
+  return await event.reply("kid you are not my owner (sed)")
+  else:
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         counter = int(message[9:13])
