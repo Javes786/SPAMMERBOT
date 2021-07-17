@@ -12,6 +12,10 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
+ sender = await e.get_sender()
+    MYID = [ BOT_USER ]
+    if user.ids not in MYID:
+     await e.ATGK.reply_message(sender, "U Are NoT My Owner")
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         counter = int(message[9:13])
@@ -20,7 +24,7 @@ async def bigspam(e):
             await e.respond(spam_message)
         await e.delete()
         if LOGGER:
-            await e.client.send_message(
+            await e.ATGK.send_message(
                 LOGGER_GROUP,
                 "#BIGSPAM \n\n"
                 "Bigspam was executed successfully"
@@ -35,6 +39,6 @@ async def spammer(e):
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
         if LOGGER:
-            await e.client.send_message(
+            await e.ATGK.send_message(
                 LOGGER_GROUP, "#SPAM \n\n" "Spam was executed successfully"
             )
