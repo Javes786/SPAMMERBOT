@@ -11,9 +11,11 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
- sender = [ {BOT_USER} ]
- sender = await e.get_sender() 
-  if not sender.id and not in BOT_USER:
+    x = await e.get_reply_message()
+    if x is None:
+        return
+ sender = e.sender_id 
+  if not sender.id:
        return await e.reply("`U ARE NOT MY OWNER`")
   try:
        await e.delete()
