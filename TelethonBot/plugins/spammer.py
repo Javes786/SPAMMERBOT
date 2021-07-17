@@ -10,7 +10,7 @@ LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 BOT_USER = os.environ.get("BOT_USER", 511112479)
 BOT_USER = vv
 
-@ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
+@ATGK.on(events.NewMessage(incoming=True, pattern="^/bigspam"))
 async def bigspam(e):
                      vv = await e.get_sender()
       if sender.id in vv:
