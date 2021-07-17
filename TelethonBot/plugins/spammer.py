@@ -15,7 +15,7 @@ async def bigspam(e):
                      users = [BOT_USER]
 if not e.sender_id in users:
   return await e.reply("kid you are not my owner (sed)")
-
+async await:
     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         counter = int(message[9:13])
