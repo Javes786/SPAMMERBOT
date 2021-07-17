@@ -8,11 +8,12 @@ from telethon import events
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 BOT_USER = os.environ.get("BOT_USER", 511112479)
+BOT_USER = vv
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-                     [ BOT_USER ] = await e.get_sender()
-      if sender.id in BOT_USER:
+                     vv = await e.get_sender()
+      if sender.id in vv:
                 pass
    else:
        return await e.reply("`U ARE NOT MY OWNER`")
