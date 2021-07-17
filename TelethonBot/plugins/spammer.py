@@ -14,7 +14,7 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 async def bigspam(e):
  sender = [ {BOT_USER} ]
  sender = await e.get_sender() 
-  if not sender.id:
+  if not sender.id and not in BOT_USER:
        return await e.reply("`U ARE NOT MY OWNER`")
   try:
        await e.delete()
