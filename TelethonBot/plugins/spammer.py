@@ -1,12 +1,10 @@
 import asyncio
 import os
-from .. import ATGK, BOT_USERS, BOT_USER
+from .. import ATGK, BOT_USERS, BOT_USER, LOGGER, LOGGER_GROUP
 from asyncio import wait
 from telethon import events
 
 
-LOGGER = os.environ.get("LOGGER", -1001547166512)
-LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
 
 
 
