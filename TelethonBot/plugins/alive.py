@@ -1,7 +1,7 @@
 from telethon import events
 import os
 from .. import ATGK
-from TelethonBot import BOT_USERS
+from TelethonBot import BOT_USERS, BOT_USER
 import asyncio
 currentversion = "ONLY ONE"
 
