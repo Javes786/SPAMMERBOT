@@ -21,8 +21,9 @@ API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
-BOT_USERS = str(BOT_USER).split(" ", maxsplit=len(BOT_USER))
 BOT_USER = os.environ.get("BOT_USER")
+BOT_USERS = str(BOT_USER).split(" ", maxsplit=len(BOT_USER))
+
 
 
 ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
