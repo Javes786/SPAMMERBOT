@@ -1,11 +1,11 @@
 from telethon import events
 import os
 from .. import ATGK
-from TelethonBot import BOT_USERS, BOT_USER
+from TelethonBot import BOT_USERS, BOT_USER, ALIVE_NAME
 import asyncio
 currentversion = "ONLY ONE"
 
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "HACKER PREM")
+
 PM_IMG = os.environ.get("PM_IMG", None)
 
 ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
