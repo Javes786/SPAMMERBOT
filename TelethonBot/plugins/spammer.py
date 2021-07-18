@@ -7,12 +7,12 @@ from telethon import events
 
 LOGGER = os.environ.get("LOGGER", -1001547166512)
 LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
-BOT_USER = os.environ.get("BOT_USER", 511112479)
+
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-  users = BOT_USER
+  users = BOT_USERS
   if not e.sender_id in BOT_USERS:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
