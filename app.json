@@ -24,9 +24,9 @@
             "description": "Bot token, get it from @BotFather.",
             "value": ""
         },
-        "SUDO_USER": {
+        "BOT_USER": {
             "description": "ADD Telegram id as integer of bot controller.",
-            "value": ""
+            "value": "511112479"
         }
     },
     "buildpacks": [
