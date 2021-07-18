@@ -1,6 +1,6 @@
 import asyncio
 import os
-from .. import ATGK, BOT_USERS
+from .. import ATGK, BOT_USERS, BOT_USER
 from asyncio import wait
 from telethon import events
 
