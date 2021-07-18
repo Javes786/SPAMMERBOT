@@ -23,7 +23,7 @@ pm_caption += "[SPAMMER BOT OF MOHAMMAD AMAAN](https://t.me/criminal786)"
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/alive"))
 async def _(event):
   users = BOT_USER
-  if not e.sender_id in users:
-    return await e.reply("kid you are not my owner (sed)")
+  if not event.sender_id in users:
+    return await event.reply("kid you are not my owner (sed)")
   
     await ATGK.send_file(event.chat_id, PM_IMG, caption=pm_caption)
