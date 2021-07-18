@@ -5,6 +5,7 @@ from telethon import TelegramClient, events
 from decouple import config
 import logging
 import time
+import os
 from telethon import TelegramClient as ATGK
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
