@@ -21,7 +21,7 @@ async def bigspam(e):
             await e.respond(spam_message)
         await e.delete()
         if LOGGER:
-            await e.ATGK.send_message(
+            await e.client.send_message(
                 LOGGER_GROUP,
                 "#BIGSPAM \n\n"
                 "Bigspam was executed successfully"
@@ -39,6 +39,6 @@ async def spammer(e):
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
         if LOGGER:
-            await e.ATGK.send_message(
+            await e.client.send_message(
                 LOGGER_GROUP, "#SPAM \n\n" "Spam was executed successfully"
             )
