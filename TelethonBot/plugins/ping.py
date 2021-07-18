@@ -35,7 +35,9 @@ def get_readable_time(seconds: int) -> str:
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/ping"))
 async def ping(event):
-  
+  users = BOT_USERS
+  if not str(e.sender_id) in users:
+    return await e.reply("kid you are not my owner (sed)")  
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
