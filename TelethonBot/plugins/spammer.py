@@ -1,6 +1,6 @@
 import asyncio
 import os
-from .. import ATGK
+from .. import ATGK, BOT_USERS
 from asyncio import wait
 from telethon import events
 
@@ -13,7 +13,7 @@ BOT_USER = os.environ.get("BOT_USER", 511112479)
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
   users = BOT_USER
-  if not e.sender_id in users:
+  if not e.sender_id in BOT_USERS:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
