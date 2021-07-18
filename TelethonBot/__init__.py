@@ -18,7 +18,9 @@ yooprint = logging.getLogger("WARNING")
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
-SUDO_USERS = config("SUDO_USERS", default=None)
+LOGGER = os.environ.get("LOGGER", -1001547166512)
+LOGGER_GROUP = os.environ.get("LOGGER_GROUP", -1001547166512)
+BOT_USER = os.environ.get("BOT_USER", 511112479)
 
 
 ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
