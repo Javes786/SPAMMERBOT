@@ -1,7 +1,7 @@
 from telethon import events
 import os
 from .. import ATGK
-from TelethonBot import BOT_USER
+from TelethonBot import BOT_USERS
 import asyncio
 currentversion = "ONLY ONE"
 
@@ -22,8 +22,6 @@ pm_caption += "[SPAMMER BOT OF MOHAMMAD AMAAN](https://t.me/criminal786)"
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/alive"))
 async def _(event):
-  users = BOT_USER
-  if not event.sender.id in users:
+  if not event.sender_id in BOT_USERS:
     return await event.reply("kid you are not my owner (sed)")
-  
-    await ATGK.send_file(event.chat_id, PM_IMG, caption=pm_caption)
+  await ATGK.send_file(event.chat_id, PM_IMG, caption=pm_caption)
