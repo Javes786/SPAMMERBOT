@@ -14,10 +14,10 @@ pm_caption = "➥ **SPAMMER IS:** `ONLINE`\n\n"
 pm_caption += "➥ **Python:** `3.9.6` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **Current Branch** : `master`\n"
-pm_caption += f"➥ **My Boss** : {ALIVE_NAME} \n"
+pm_caption += f"➥ **WORKER OF** : {ALIVE_NAME} \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 pm_caption += "➥ **CopyRight** : By [ATGK](GitHub.com/Javes786)\n"
-pm_caption += "[SPAMMER BOT OF MOHAMMAD AMAAN](https://t.me/criminal786)"
+pm_caption += "[MADE BY 『 ツᴅɪᴄᴛᴀᴛᴏʀ乛ᴀᴍᴀᴀɴ々』 ](https://t.me/criminal786)"
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/alive"))
