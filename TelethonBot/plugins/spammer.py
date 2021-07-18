@@ -31,7 +31,7 @@ async def bigspam(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
 async def spammer(e):
-  users = BOT_USER
+  users = BOT_USERS
   if not e.sender_id in users:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
