@@ -1,11 +1,11 @@
 import asyncio
 import os
-from .. import ATGK, BOT_USERS, BOT_USER, LOGGER, LOGGER_GROUP
+from .. import ATGK, BOT_USERS, BOT_USER, LOGGER_GROUP
 from asyncio import wait
 from telethon import events
 
 
-
+LOGGER = LOGGER_GROUP
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
