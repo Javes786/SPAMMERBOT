@@ -27,8 +27,8 @@ async def aexec(code, event):
 )
 async def _(event):
   users = BOT_USERS
-  if not str(e.sender_id) in users:
-    return await e.reply("kid you are not my owner (sed)")
+  if not str(event.sender_id) in users:
+    return await event.reply("kid you are not my owner (sed)")
     cmd = event.text.split(" ", maxsplit=1)[1]
     cmd = event.text.split(" ", maxsplit=1)[1] 
     reply_to_id = event.message.id
