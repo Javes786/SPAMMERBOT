@@ -23,7 +23,7 @@ async def aexec(code, event):
     return await locals()['__aexec'](event)
 
 @ATGK.on(
-    events.NewMessage(pattern="^/eval", func=lambda e: e.sender_id in BOT_USER)
+    events.NewMessage(pattern="^/eval", func=lambda e: e.sender_id in BOT_USERS)
 )
 async def _(event):
     cmd = event.text.split(" ", maxsplit=1)[1]
