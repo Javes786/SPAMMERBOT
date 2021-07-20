@@ -33,13 +33,13 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@ATGK.on(events.NewMessage(incoming=True, pattern="^/ping"))
-async def ping(event):
+@ATGK.on(events.NewMessage(incoming=True, pattern="^/ping", func=lambda e: e.sender_id in BOT_USERS))
+async def ping(e):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - Lastupdate))
     await ATGK.send_message(
-        event.chat_id,
+        e.chat_id,
         f"**╔═══╗╔══╗╔═╗─╔╗╔═══╗\n║╔═╗║╚╣─╝║║╚╗║║║╔═╗║\n║╚═╝║─║║─║╔╗╚╝║║║─╚╝\n║╔══╝─║║─║║╚╗║║║║╔═╗\n║║───╔╣─╗║║─║║║║╚╩═║\n╚╝───╚══╝╚╝─╚═╝╚═══╝**\n ➲ `{ms}` \n ➲ `{uptime}`",
     )
