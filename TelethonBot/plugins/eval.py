@@ -1,4 +1,4 @@
-from .. import ATGK, BOT_USERS
+from .. import ATGK, BOT_USERS, BOT_USER
 from telethon import events
 import re, os
 import asyncio
@@ -23,7 +23,7 @@ async def aexec(code, event):
     return await locals()['__aexec'](event)
 
 @ATGK.on(
-    events.NewMessage(pattern="^/eval", func=lambda e: e.sender_id in BOT_USERS)
+    events.NewMessage(pattern="^/eval", func=lambda e: e.sender_id in BOT_USER)
 )
 async def _(event):
     cmd = event.text.split(" ", maxsplit=1)[1]
