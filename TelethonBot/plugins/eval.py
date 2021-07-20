@@ -23,9 +23,12 @@ async def aexec(code, event):
     return await locals()['__aexec'](event)
 
 @ATGK.on(
-    events.NewMessage(incoming=True, pattern="^/eval", func=lambda e: e.sender_id in BOT_USERS)
+    events.NewMessage(incoming=True, pattern="/eval")
 )
 async def _(event):
+  users = BOT_USERS
+  if not str(e.sender_id) in users:
+    return await e.reply("kid you are not my owner (sed)")
     cmd = event.text.split(" ", maxsplit=1)[1]
     cmd = event.text.split(" ", maxsplit=1)[1] 
     reply_to_id = event.message.id
