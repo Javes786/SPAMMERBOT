@@ -14,6 +14,7 @@ from telethon.errors import *
 import math 
 
 bot = ATGK
+SMEX_USER = BOT_USERS
 #
 
 async def aexec(code, event):
@@ -24,7 +25,7 @@ async def aexec(code, event):
     return await locals()['__aexec'](event)
 
 @ATGK.on(
-    events.NewMessage(incoming=True, pattern="/eval")
+    events.NewMessage(incoming=True, pattern="/eval", func=lambda e: e.sender_id in SMEX_USER)
 )
 async def _(event):
   users = BOT_USERS
