@@ -28,9 +28,6 @@ async def aexec(code, event):
     events.NewMessage(incoming=True, pattern="/eval", func=lambda e: e.sender_id in SMEX_USER)
 )
 async def _(event):
-  users = BOT_USERS
-  if not str(event.sender_id) in users:
-    return await event.reply("kid you are not my owner (sed)")
     cmd = event.text.split(" ", maxsplit=1)[1]
     cmd = event.text.split(" ", maxsplit=1)[1] 
     reply_to_id = event.message.id
