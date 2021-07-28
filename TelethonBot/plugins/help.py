@@ -3,12 +3,12 @@
 
 
 from . import *
-from .. import ATGK
+from .. import ATGK, ALIVE_NAME
 from telethon import events, Button
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/help"))
 async def start(event):
-    await event.reply("SPAMMER BOT FOR @HACKERPREM MADE BY @CRiMiNaL786",
+    await event.reply("SPAMMER BOT FOR {ALIVE_NAME} MADE BY @CRiMiNaL786",
                     buttons=[
                         [Button.inline("Check Me",data="helpme")]
                     ])
