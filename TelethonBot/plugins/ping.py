@@ -35,14 +35,13 @@ def get_readable_time(seconds: int) -> str:
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/ping"))
 async def ping(e):
-  if e.sender_id in BOT_USERS:
-    try:
-       start = datetime.now()
-       end = datetime.now()
-       ms = (end - start).microseconds / 1000
-       uptime = get_readable_time((time.time() - Lastupdate))
-       await ATGK.send_message(
-           e.chat_id,
-           f"**╔═══╗╔══╗╔═╗─╔╗╔═══╗\n║╔═╗║╚╣─╝║║╚╗║║║╔═╗║\n║╚═╝║─║║─║╔╗╚╝║║║─╚╝\n║╔══╝─║║─║║╚╗║║║║╔═╗\n║║───╔╣─╗║║─║║║║╚╩═║\n╚╝───╚══╝╚╝─╚═╝╚═══╝**\n ➲ `{ms}` \n ➲ `{uptime}`",
-
-       )
+if e.sender_id in SUDO_USERS:
+    start = datetime.now()
+    end = datetime.now()
+    ms = (end - start).microseconds / 1000
+    uptime = get_readable_time((time.time() - Lastupdate))
+    await ATGK.send_message(
+        e.chat_id,
+        f"**╔═══╗╔══╗╔═╗─╔╗╔═══╗\n║╔═╗║╚╣─╝║║╚╗║║║╔═╗║\n║╚═╝║─║║─║╔╗╚╝║║║─╚╝\n║╔══╝─║║─║║╚╗║║║║╔═╗\n║║───╔╣─╗║║─║║║║╚╩═║\n╚╝───╚══╝╚╝─╚═╝╚═══╝**\n ➲ `{ms}` \n ➲ `{uptime}`",
+    )
+  
