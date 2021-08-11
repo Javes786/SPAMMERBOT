@@ -1,5 +1,5 @@
 # SPAMMER BOT
-A PERSONAL SPAMMING BOT MADE FOR [HACKER PREM](https://t.me/hackerprem) MADE BY [MOHAMMAD AMAAN](https://t.me/criminal786).
+A PERSONAL SPAMMING BOT MADE BY [MOHAMMAD AMAAN](https://t.me/criminal786).
 
 JOIN MY [GROUP](https://t.me/javesgroup) FOR BUSSINESS QUERIES.
 
