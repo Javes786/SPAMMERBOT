@@ -37,6 +37,7 @@ def get_readable_time(seconds: int) -> str:
 async def ping(e):
  if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you are not my owner (sed)")
+ else:
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
