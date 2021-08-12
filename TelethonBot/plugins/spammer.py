@@ -43,12 +43,12 @@ async def spammer(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
 async def uspammer(e):
-  if not str(event.sender_id) in BOT_USERS:
-    return await event.reply("kid you are not my owner (sed)")
-      xD = event.text[7:]
+  if not str(e.sender_id) in BOT_USERS:
+    return await e.reply("kid you are not my owner (sed)")
+      xD = e.text[7:]
       a = 1
       while a == 1:
-        await event.client.send_message(event.chat, xD)
+        await e.client.send_message(e.chat, xD)
         await asyncio.sleep(2)
         if LOGGER_GROUP:
             await e.client.send_message(
