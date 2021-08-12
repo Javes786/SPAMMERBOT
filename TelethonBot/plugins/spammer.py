@@ -45,6 +45,7 @@ async def spammer(e):
 async def uspammer(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you are not my owner (sed)")
+  try:
       xD = e.text[7:]
       a = 1
       while a == 1:
