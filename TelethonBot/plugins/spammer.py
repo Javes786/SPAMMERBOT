@@ -5,8 +5,6 @@ from asyncio import wait
 from telethon import events
 
 
-LOGGER = LOGGER_GROUP
-
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
