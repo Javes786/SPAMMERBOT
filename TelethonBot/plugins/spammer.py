@@ -40,3 +40,19 @@ async def spammer(e):
                 "#SPAM \n\n"
                 "Spam was executed successfully"
                 )
+
+@ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
+async def uspammer(e):
+  if not str(event.sender_id) in BOT_USERS:
+    return await event.reply("kid you are not my owner (sed)")
+      xD = event.text[7:]
+      a = 1
+      while a == 1:
+        await event.client.send_message(event.chat, xD)
+        await asyncio.sleep(2)
+        if LOGGER_GROUP:
+            await e.client.send_message(
+                LOGGER_GROUP,
+                "#USPAM \n\n"
+                "Uspam was executed successfully"
+                )
