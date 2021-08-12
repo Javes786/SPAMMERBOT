@@ -3,7 +3,7 @@ import os
 from .. import ATGK, BOT_USERS, BOT_USER, LOGGER_GROUP
 from asyncio import wait
 from telethon import events
-
+LOGGER_GROUP = -1001567163016
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
@@ -20,7 +20,7 @@ async def bigspam(e):
         await e.delete()
         if LOGGER_GROUP:
             await e.client.send_message(
-                {LOGGER_GROUP},
+                LOGGER_GROUP,
                 "#BIGSPAM \n\n"
                 "Bigspam was executed successfully"
                 )
@@ -38,7 +38,7 @@ async def spammer(e):
         await e.delete()
         if LOGGER_GROUP:
             await e.client.send_message(
-                {LOGGER_GROUP},
+                LOGGER_GROUP,
                 "#SPAM \n\n"
                 "Spam was executed successfully"
                 )
