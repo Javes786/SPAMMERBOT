@@ -50,10 +50,4 @@ async def uspammer(e):
       a = 1
       while a == 1:
         await e.client.send_message(e.chat, xD)
-        await asyncio.sleep(2)
-        if LOGGER_GROUP:
-            await e.client.send_message(
-                LOGGER_GROUP,
-                "#USPAM \n\n"
-                "Uspam was executed successfully"
-                )
+        await asyncio.sleep(1)
