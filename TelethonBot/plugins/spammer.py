@@ -50,4 +50,4 @@ async def uspammer(e):
       a = 1
       while a == 1:
         await e.client.send_message(e.chat, xD)
-        await asyncio.sleep(1)
+        await asyncio.sleep(1.5)
