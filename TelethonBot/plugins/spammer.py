@@ -18,7 +18,7 @@ async def bigspam(e):
         for i in range(1, counter):
             await e.respond(spam_message)
         await e.delete()
-        try:
+        if LOGGER_GROUP:
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#BIGSPAM \n\n"
@@ -36,7 +36,7 @@ async def spammer(e):
         spam_message = str(e.text[8:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
-        try:
+        if LOGGER_GROUP:
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#SPAM \n\n"
