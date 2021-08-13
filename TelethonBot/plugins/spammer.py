@@ -51,3 +51,17 @@ async def uspammer(e):
       while a == 1:
         await e.client.send_message(e.chat, xD)
         await asyncio.sleep(1.9)
+
+
+@ATGK.on(events.NewMessage(incoming=True, pattern="/restart"))
+async def restart(e):
+  if not str(event.sender_id) in BOT_USERS:
+    return await event.reply("kid you are not my owner (sed)")
+  ATGK.disconnect()
+    except Exception as e:
+        pass
+else:
+    try:
+        ATFK.run_until_disconnected()
+    except Exception as e:
+        pass
