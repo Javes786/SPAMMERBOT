@@ -57,11 +57,14 @@ async def uspammer(e):
 async def restart(e):
   if not str(event.sender_id) in BOT_USERS:
     return await event.reply("kid you are not my owner (sed)")
+  if e.sender_id in BOT_USERS:
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait till it reboots..."
+        await e.reply(text, parse_mode=None, link_preview=None)
   ATGK.disconnect()
-    except Exception as e:
+    except Exception:
         pass
 else:
     try:
-        ATFK.run_until_disconnected()
-    except Exception as e:
+        ATGK.run_until_disconnected()
+    except Exception:
         pass
