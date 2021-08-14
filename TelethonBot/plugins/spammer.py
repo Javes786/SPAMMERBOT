@@ -64,3 +64,5 @@ async def restart(e):
         await ATGK.disconnect()
     except Exception:
         pass
+    os.execl(sys.executable, sys.executable, *sys.argv)
+        quit()
