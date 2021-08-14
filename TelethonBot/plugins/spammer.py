@@ -64,8 +64,3 @@ async def restart(e):
         await ATGK.disconnect()
     except Exception:
         pass
-else:
-    try:
-        ATGK.run_until_disconnected()
-    except Exception:
-        pass
