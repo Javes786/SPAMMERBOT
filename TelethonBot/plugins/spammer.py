@@ -65,4 +65,4 @@ async def restart(e):
     except Exception:
         pass
     os.execl(sys.executable, sys.executable, *sys.argv)
-        quit()
+    quit()
