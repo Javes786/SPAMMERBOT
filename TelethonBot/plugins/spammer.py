@@ -50,7 +50,7 @@ async def uspammer(e):
       a = 1
       while a == 1:
         await e.client.send_message(e.chat, xD)
-        await asyncio.sleep(1.9)
+        await asyncio.sleep(0.09)
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/restart"))
