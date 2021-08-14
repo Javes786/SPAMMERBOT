@@ -55,10 +55,11 @@ async def uspammer(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/restart"))
 async def restart(e):
-  if not str(event.sender_id) in BOT_USERS:
-    return await event.reply("kid you are not my owner (sed)")
-  if e.sender_id in BOT_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait till it reboots..."
+  if not str(e.sender_id) in BOT_USERS:
+    return await e.reply("kid you are not my owner (sed)")
+  if str(e.sender_id) in BOT_USERS:
+    try:
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait a min 😲😬..."
         await e.reply(text, parse_mode=None, link_preview=None)
         await ATGK.disconnect()
     except Exception:
