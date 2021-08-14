@@ -60,7 +60,6 @@ async def restart(e):
   if e.sender_id in BOT_USERS:
         text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait till it reboots..."
         await e.reply(text, parse_mode=None, link_preview=None)
-    try:
         await ATGK.disconnect()
     except Exception:
         pass
