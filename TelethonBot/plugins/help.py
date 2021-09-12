@@ -29,7 +29,8 @@ async def helper(event):
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="2"))
 async def ex(event):
-    await event.edit(text,
+    text2="YaHa KuCH Nhi BiRO."
+    await event.edit(text2,
                      buttons=[
                          [Button.inline("BacK", data="helpme")]
                      ])
