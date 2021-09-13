@@ -11,7 +11,7 @@ ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/help"))
 async def start(event):
-    await event.reply("SPAMMER BOT FOR {ALIVE_NAME} MADE BY @CRiMiNaL786",
+    await event.reply("SPAMMER BOT FOR f'\n{ALIVE_NAME} 'MADE BY @CRiMiNaL786",
                     buttons=[
                         [Button.inline("Check Me",data="helpme")]
                     ])
