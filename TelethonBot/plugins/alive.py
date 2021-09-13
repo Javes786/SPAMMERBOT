@@ -10,14 +10,14 @@ PM_IMG = os.environ.get("PM_IMG", None)
 
 ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
 PM_IMG = "https://telegra.ph/file/9a55abc7b250a0b9ae7f9.jpg"
-pm_caption = "• **SPAMMER IS:** `ONLINE`\n\n"
-pm_caption += "• **Python:** `3.9.6` \n"
-pm_caption += "• **Database Status:**  `Functional`\n"
-pm_caption += "• **Current Branch** : `master`\n"
-pm_caption += f"• **WORKER OF** : {ALIVE_NAME} \n"
-pm_caption += "• **Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "• **CopyRight** : By [ATGK](GitHub.com/Javes786)\n"
-pm_caption += "[MADE BY 『 ツᴅɪᴄᴛᴀᴛᴏʀ乛ᴀᴍᴀᴀɴ々』 ](https://t.me/criminal786)"
+pm_caption = "• **Sᴘᴀᴍᴍᴇʀ ɪs:** `Oɴʟɪɴᴇ`\n\n"
+pm_caption += "• **Tᴇʟᴇᴛʜᴏɴ:** `3.9.7` \n"
+pm_caption += "• **Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛᴜs:**  `Fᴜɴᴄᴛɪᴏɴᴀʟ`\n"
+pm_caption += "• **Cᴜʀʀᴇɴᴛ Bʀᴀɴᴄʜ** : `ตαsԵҽɾ`\n"
+pm_caption += f"• **Wᴏʀᴋᴇʀ Oғ** : {ALIVE_NAME} \n"
+pm_caption += "• **Hᴇʀᴏᴋᴜ Dᴀᴛᴀʙᴀsᴇ** : `AWS - ωοяκíиg ρяορєяℓγ`\n\n"
+pm_caption += "• **Cᴏᴘʏʀɪɢʜᴛ** : ϐγ [ATGK](GitHub.com/Javes786)\n"
+pm_caption += "[Mᴀᴅᴇ ʙʏ 『 ツᴅɪᴄᴛᴀᴛᴏʀ乛ᴀᴍᴀᴀɴ々』 ](https://t.me/criminal786)"
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/alive"))
