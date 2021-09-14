@@ -25,8 +25,7 @@ async def helper(event):
                          [Button.url("ϲнαииєℓ", url="https://t.me/destroyxofficial")],
                          [Button.url("gяουρ", url="https://t.me/DesTRoYxsupport")],
                          [Button.url("gινє α sԵαɾ ⭐", url="https://github.com/CRiMiNaL786")],
-                         [Button.inline("ƒυϲκ", data="2")]
-                         [Button.inline("ϲℓοѕє", data="3")]
+                         [Button.inline("ƒυϲκ", data="2" ; "ϲℓοѕє", data="3")]
                      ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="2"))
