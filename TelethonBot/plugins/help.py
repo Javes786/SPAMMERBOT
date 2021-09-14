@@ -26,6 +26,7 @@ async def helper(event):
                          [Button.url("gяουρ", url="https://t.me/DesTRoYxsupport")],
                          [Button.url("gινє α sԵαɾ ⭐", url="https://github.com/CRiMiNaL786")],
                          [Button.inline("ƒυϲκ", data="2")]
+                         [Button.inline("ϲℓοѕє", data="3")]
                      ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="2"))
@@ -34,4 +35,12 @@ async def ex(event):
     await event.edit(text2,
                      buttons=[
                          [Button.inline("ϐαϲκ", data="helpme")]
+                     ])
+
+@ATGK.on(events.callbackquery.CallbackQuery(data="3"))
+async def ex(event):
+    text3="мєиυ нαѕ ϐєєи ϲℓοѕє∂."
+    await event.edit(text3,
+                     buttons=[
+                         [Button.inline("яєορєи", data="helpme")]
                      ])
