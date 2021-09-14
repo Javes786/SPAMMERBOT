@@ -5,11 +5,11 @@ from TelethonBot import BOT_USERS, BOT_USER, ALIVE_NAME
 import asyncio
 currentversion = "ONLY ONE"
 
-
-PM_IMG = os.environ.get("PM_IMG", None)
-
 ALIVE_NAME = str(ALIVE_NAME) if ALIVE_NAME else "SPAMMER BOT"
-PM_IMG = "https://telegra.ph/file/9a55abc7b250a0b9ae7f9.jpg"
+import os
+amaan786 = os.environ.get("PM_IMG", None)
+if not amaan786:
+ amaan786 = "https://telegra.ph/file/9a55abc7b250a0b9ae7f9.jpg"
 pm_caption = "• **Sᴘᴀᴍᴍᴇʀ ɪs:** `Oɴʟɪɴᴇ`\n\n"
 pm_caption += "• **Pʏᴛʜᴏɴ:** `3.9.7` \n"
 pm_caption += "• **Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛᴜs:**  `Fᴜɴᴄᴛɪᴏɴᴀʟ`\n"
@@ -24,4 +24,4 @@ pm_caption += "[Mᴀᴅᴇ ʙʏ 『 ツᴅɪᴄᴛᴀᴛᴏʀ乛ᴀᴍᴀᴀɴ�
 async def alive(event):
   if not str(event.sender_id) in BOT_USERS:
     return await event.reply("kid you are not my owner (sed)")
-  await ATGK.send_file(event.chat_id, PM_IMG, caption=pm_caption)
+  await ATGK.send_file(event.chat_id, amaan786, caption=pm_caption)
