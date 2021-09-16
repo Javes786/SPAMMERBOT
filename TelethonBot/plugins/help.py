@@ -23,15 +23,18 @@ async def helper(event):
     await event.edit(text,
                      buttons=[
                          [Button.inline("info", data="lu")],
-                         [Button.inline("ƒυϲκ", data="2")],
+                         [Button.inline("commands", data="2")],
                          [Button.inline("ϲℓοѕє", data="3")]
                      ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="2"))
 async def ex(event):
-    text2="иοτнιиg нєяє ѕαя."
-    await event.edit(text2,
+    uuu="CLiCK oN BUTToNS SaR"
+    await event.edit(uuu,
                      buttons=[
+                         [Button.inline("SPAM", data="spam")],
+                         [Button.inline("BiGSPAM", data="bigspam")],
+                         [Button.inline("USPAM", data="uspam")],
                          [Button.inline("ϐαϲκ", data="helpme")]
                      ])
 
@@ -52,4 +55,28 @@ async def ex(event):
                          [Button.url("gяουρ", url="https://t.me/DesTRoYxsupport")],
                          [Button.url("gινє α sԵαɾ ⭐", url="https://github.com/CRiMiNaL786")],
                          [Button.inline("back", data="helpme")]
+                     ])
+
+@ATGK.on(events.callbackquery.CallbackQuery(data="spam"))
+async def ex(event):
+    texi="➽ /spam number text \nMaximum /spam 99 text."
+    await event.edit(texi,
+                     buttons=[
+                         [Button.inline("ϐαϲκ", data="2")]
+                     ])
+
+@ATGK.on(events.callbackquery.CallbackQuery(data="bigspam"))
+async def ex(event):
+    tut="➽ /bigspam number text \nMinimum /bigspam 101 text \nMaximum /bigspam 9999 text."
+    await event.edit(tut,
+                     buttons=[
+                         [Button.inline("ϐαϲκ", data="2")]
+                     ])
+
+@ATGK.on(events.callbackquery.CallbackQuery(data="uspam"))
+async def ex(event):
+    tempu="➽ /uspam text \nNo LimiT \nJust Do /restart to stop."
+    await event.edit(tempu,
+                     buttons=[
+                         [Button.inline("ϐαϲκ", data="helpme")]
                      ])
