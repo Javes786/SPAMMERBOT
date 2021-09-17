@@ -3,7 +3,8 @@ import os
 from .. import ATGK, BOT_USERS, BOT_USER, LOGGER_GROUP
 from asyncio import wait
 from telethon import events
-LOGGER_GROUP = -1001567163016
+LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
+  
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
