@@ -19,10 +19,10 @@ yooprint = logging.getLogger("WARNING")
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
-LOGGER_GROUP = os.environ.get("LOGGER_GROUP", None)
+LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
 BOT_USER = os.environ.get("BOT_USER")
 BOT_USERS = str(BOT_USER).split(" ", maxsplit=len(BOT_USER))
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "HACKER PREM")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "DICTATOR AMAAN")
 
 
 ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
