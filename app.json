@@ -24,6 +24,18 @@
             "description": "Bot token, get it from @BotFather.",
             "value": ""
         },
+        "ALIVE_NAME": {
+            "description": "Required for bot owner details.",
+            "value": ""
+        },
+        "LOGGER_GROUP": {
+            "description": " Add ur bot in a private group and fill this var with group id no.",
+            "value": ""
+        },
+        "PM_IMG": {
+            "description": " add ur telegraph media link required for /alive.,
+            "value": ""
+        },
         "BOT_USER": {
             "description": "ADD Telegram id as integer of bot controller.",
             "value": "511112479"
