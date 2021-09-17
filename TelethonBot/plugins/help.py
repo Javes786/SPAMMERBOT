@@ -14,7 +14,7 @@ async def start(event):
     tatti=f"Sᴘᴀᴍᴍᴇʀ Bᴏᴛ Fᴏʀ {ALIVE_NAME} \nMᴀᴅᴇ Bʏ @CRiMiNaL786"
     await event.reply(tatti,
                     buttons=[
-                        [Button.inline("Check Me",data="helpme")]
+                        [Button.inline("cհҽϲκ мє",data="helpme")]
                     ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="helpme"))
@@ -22,19 +22,19 @@ async def helper(event):
     text="ι Aᴍ Sᴘᴀᴍᴍᴇʀ Bᴏᴛ!\nι Cᴀɴ Sᴘᴀᴍ Fᴏʀ Mʏ Mᴀsᴛᴇʀ.\n\nTʀʏ Mᴇ!! Rᴇϙᴜᴇsᴛ Cᴏᴅᴇ ɪɴ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ!"
     await event.edit(text,
                      buttons=[
-                         [Button.inline("info", data="lu")],
-                         [Button.inline("commands", data="2")],
+                         [Button.inline("ιиƒο", data="lu")],
+                         [Button.inline("ϲοммαи∂ѕ", data="2")],
                          [Button.inline("ϲℓοѕє", data="3")]
                      ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="2"))
 async def ex(event):
-    uuu="CLiCK oN BUTToNS SaR"
+    uuu="ϲοммαи∂ѕ ϐυττοиѕ ϐєℓοω :)"
     await event.edit(uuu,
                      buttons=[
-                         [Button.inline("SPAM", data="spam")],
-                         [Button.inline("BiGSPAM", data="bigspam")],
-                         [Button.inline("USPAM", data="uspam")],
+                         [Button.inline("ѕραм", data="spam")],
+                         [Button.inline("ϐιgѕραм", data="bigspam")],
+                         [Button.inline("υѕραм", data="uspam")],
                          [Button.inline("ϐαϲκ", data="helpme")]
                      ])
 
@@ -48,13 +48,13 @@ async def ex(event):
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="lu"))
 async def ex(event):
-    text4="Some helpful info."
+    text4="ѕοмє нєℓρƒυℓ ιиƒο."
     await event.edit(text4,
                      buttons=[
                          [Button.url("ϲнαииєℓ", url="https://t.me/destroyxofficial")],
                          [Button.url("gяουρ", url="https://t.me/DesTRoYxsupport")],
                          [Button.url("gινє α sԵαɾ ⭐", url="https://github.com/CRiMiNaL786")],
-                         [Button.inline("back", data="helpme")]
+                         [Button.inline("ϐαϲκ", data="helpme")]
                      ])
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="spam"))
@@ -78,5 +78,5 @@ async def ex(event):
     tempu="➽ /uspam text \nNo LimiT \nJust Do /restart to stop."
     await event.edit(tempu,
                      buttons=[
-                         [Button.inline("ϐαϲκ", data="helpme")]
+                         [Button.inline("ϐαϲκ", data="2")]
                      ])
