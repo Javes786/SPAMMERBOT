@@ -36,6 +36,10 @@ async def spammer(e):
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
+  if e.text in abcd:
+    return await e.reply("Maachuda Tu Wo Owner Hai")
+  if not e.text in abcd:
+    try:
         counter = int(message[6:8])
         spam_message = str(e.text[8:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
