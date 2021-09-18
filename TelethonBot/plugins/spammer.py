@@ -6,6 +6,7 @@ from telethon import events
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
   
 abcd = "@CoPYLess786"
+x = "@LEGENDX90"
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
@@ -14,7 +15,7 @@ async def bigspam(e):
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
-  if (abcd.lower()) in (e.text.lower()):
+  if (abcd.lower()) in (e.text.lower()) or (x.lower()) in (e.text.lower()):
     return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
   if not e.text in abcd:
         message = e.text
@@ -36,7 +37,7 @@ async def spammer(e):
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
-  if (abcd.lower()) in (e.text.lower()):
+  if (abcd.lower()) in (e.text.lower()) or (x.lower()) in (e.text.lower()):
     return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
   if not e.text in abcd:
         message = e.text
