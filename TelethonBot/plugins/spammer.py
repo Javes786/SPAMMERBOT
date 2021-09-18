@@ -13,11 +13,10 @@ async def bigspam(e):
   if not str(e.sender_id) in users:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
-        message = e.text
   if e.text in abcd:
     return await e.reply("Maachuda Tu Wo Owner Hai")
   if not e.text in abcd:
-    try:
+        message = e.text
         counter = int(message[9:13])
         spam_message = str(e.text[13:])
         for i in range(1, counter):
@@ -35,11 +34,10 @@ async def spammer(e):
   if not str(e.sender_id) in users:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
-        message = e.text
   if e.text in abcd:
     return await e.reply("Maachuda Tu Wo Owner Hai")
   if not e.text in abcd:
-    try:
+        message = e.text
         counter = int(message[6:8])
         spam_message = str(e.text[8:])
         await asyncio.wait([e.respond(spam_message) for i in range(counter)])
