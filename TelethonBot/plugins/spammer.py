@@ -14,9 +14,9 @@ async def bigspam(e):
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
-  if e.text is in abcd:
+  if e.text in abcd:
     return await e.reply("Maachuda Tu Wo Owner Hai")
-  if e.text is not in abcd:
+  if not e.text in abcd:
     try:
         counter = int(message[9:13])
         spam_message = str(e.text[13:])
