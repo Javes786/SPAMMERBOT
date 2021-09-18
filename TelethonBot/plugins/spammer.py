@@ -5,7 +5,7 @@ from asyncio import wait
 from telethon import events
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
   
-abcd = [@CoPYLess786]
+abcd = ["@CoPYLess786"]
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
