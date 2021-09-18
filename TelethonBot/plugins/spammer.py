@@ -37,7 +37,7 @@ async def spammer(e):
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
   if (abcd.lower()) in (e.text.lower()):
-    return await e.reply("Maachuda Tu Wo Owner Hai")
+    return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
   if not e.text in abcd:
         message = e.text
         counter = int(message[6:8])
@@ -55,7 +55,7 @@ async def uspammer(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you are not my owner (sed)")
   if (abcd.lower()) in (e.text.lower()):
-    return await e.reply("Maachuda Tu Wo Owner Hai")
+    return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
   else:
       xD = e.text[7:]
       a = 1
