@@ -15,7 +15,7 @@ async def start(event):
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="1"))
 async def ex(event):
-    await event.reply("υѕє τнιѕ ρℓєαѕє `/help`",
+    await event.edit("υѕє τнιѕ ρℓєαѕє `/help`",
                     buttons=[
                         [Button.inline("ϐαϲκ",data="2")]
                     ])
