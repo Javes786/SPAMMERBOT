@@ -7,11 +7,12 @@ LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
 import re
 abcd = "@CoPYLess786|@LEGENDX90"
 x = "@LEGENDX90"
+king = [511112479]
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
   users = BOT_USERS
-  if not str(e.sender_id) in users:
+  if not str(e.sender_id) in users or e.sender_id in king:
     return await e.reply("kid you are not my owner (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
