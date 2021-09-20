@@ -36,7 +36,7 @@ async def spammer(e):
   users = BOT_USERS
   if not str(e.sender_id) in users:
     return await e.reply("kid you are not my owner (sed)")
-  if str(e.sender_id) in users or in king:
+  if str(e.sender_id) in users or e.sender_id in king:
     await asyncio.sleep(0.01)
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
