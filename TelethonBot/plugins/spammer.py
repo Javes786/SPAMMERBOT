@@ -28,7 +28,7 @@ async def bigspam(e):
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#SPAM\n"
-                        + f"BiGSPaM was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) with {counter} times with below message",
+                        + f"BiGSPaM was executed successfully in {get_display_name(await e.get_chat())}(`{e.chat_id}`) with {counter} times with below message",
                     )
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
