@@ -5,7 +5,7 @@ from asyncio import wait
 from telethon import events
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
 import re
-abcd = "@CoPYLess786|@LEGENDX90"
+abcd = "@CoPYLess786|@CRiMiNaL786"
 x = "@LEGENDX90"
 king = [511112479]
 
@@ -28,7 +28,7 @@ async def bigspam(e):
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#BIGSPAM\n"
-                        + f"BiGSPaM was executed successfully in (await {e.get_chat_name()})(`{e.chat_id}`) with {counter} times with {e.text}",
+                        + f"BiGSPaM was executed successfully in (await {e.get_chat()})(`{e.chat_id}`) with {counter} times with {e.text}",
                     )
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
@@ -49,7 +49,7 @@ async def spammer(e):
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#SPAM\n"
-                        + f"SPaM was executed successfully in (await {e.get_chat_name()})(`{e.chat_id}`) with {counter} times with {e.text}",
+                        + f"SPaM was executed successfully in (await {e.get_chat()})(`{e.chat_id}`) with {counter} times with {e.text}",
                     )
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
