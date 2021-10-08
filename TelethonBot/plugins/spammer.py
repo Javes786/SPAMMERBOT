@@ -28,7 +28,7 @@ async def bigspam(e):
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#BIGSPAM\n"
-                        + f"BiGSPaM was executed successfully in (await {e.get_chat()})(`{e.chat_id}`) with {counter} times with {e.text}",
+                        + f"BiGSPaM was executed successfully in (await {e.chat.title()})(`{e.chat_id}`) with {counter} times with {e.text}",
                     )
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
@@ -49,7 +49,7 @@ async def spammer(e):
             await e.client.send_message(
                 LOGGER_GROUP,
                 "#SPAM\n"
-                        + f"SPaM was executed successfully in (await {e.get_chat()})(`{e.chat_id}`) with {counter} times with {e.text}",
+                        + f"SPaM was executed successfully in ({e.chat.title()})(`{e.chat_id}`) with {counter} times with {e.text}",
                     )
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
