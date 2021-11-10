@@ -13,7 +13,7 @@ king = [511112479]
 async def bigspam(e):
   users = BOT_USERS
   if not str(e.sender_id) in users:
-    return await e.reply("kid you are not my owner (sed)")
+    return await e.reply("kid you have no control on me (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
   if re.search(abcd.lower(), e.text.lower()):
@@ -35,7 +35,7 @@ async def bigspam(e):
 async def spammer(e):
   users = BOT_USERS
   if not str(e.sender_id) in users:
-    return await e.reply("kid you are not my owner (sed)")
+    return await e.reply("kid you have no control on me (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
     await asyncio.sleep(0.01)
   if re.search(abcd.lower(), e.text.lower()):
@@ -55,7 +55,7 @@ async def spammer(e):
 @ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
 async def uspammer(e):
   if not str(e.sender_id) in BOT_USERS:
-    return await e.reply("kid you are not my owner (sed)")
+    return await e.reply("kid you have no control on me (sed)")
   if (abcd.lower()) in (e.text.lower()):
     return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
   else:
@@ -64,6 +64,27 @@ async def uspammer(e):
       while a == 1:
         await e.client.send_message(e.chat, xD)
         await asyncio.sleep(1.95)
+
+@ATGK.on(events.NewMessage(incoming=True, pattern="/mspam"))
+async def m_spam(e):
+  if not str(e.sender_id) in BOT_USERS:
+    return await e.reply("kid you have no control on me (sed)")
+  else:
+    reply = await e.get_reply_message()
+  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        message = e.text
+        text = message.split()
+        counter = int(text[1])
+        media = await e.client.download_media(reply)
+        for i in range(1, counter):
+            await e.client.send_file(e.chat_id, media)
+        await e.delete()
+        if LOGGER_GROUP:
+            await e.client.send_message(
+                LOGGER_GROUP,
+                "#MEDIASPAM\n"
+                        + f"MeDia SPaM was executed successfully in {(e.chat.title)} (`{e.chat_id}`) with {counter} times with {e.text}",
+                    )
 
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/restart"))
