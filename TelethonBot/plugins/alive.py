@@ -23,5 +23,5 @@ pm_caption += "[Mᴀᴅᴇ ʙʏ 『 ツᴅɪᴄᴛᴀᴛᴏʀ乛ᴀᴍᴀᴀɴ�
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/alive"))
 async def alive(event):
   if not str(event.sender_id) in BOT_USERS:
-    return await event.reply("kid you are not my owner (sed)")
+    return await event.reply("kid you have no control on me (sed)")
   await ATGK.send_file(event.chat_id, amaan786, caption=pm_caption)
