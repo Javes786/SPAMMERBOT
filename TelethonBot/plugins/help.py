@@ -35,6 +35,7 @@ async def ex(event):
                          [Button.inline("ѕραм", data="spam")],
                          [Button.inline("ϐιgѕραм", data="bigspam")],
                          [Button.inline("υѕραм", data="uspam")],
+                         [Button.inline("мѕραм", data="mspam")],
                          [Button.inline("ϐαϲκ", data="helpme")]
                      ])
 
@@ -77,6 +78,14 @@ async def ex(event):
 async def ex(event):
     tempu="➽ /uspam text \nNo LimiT \nJust Do /restart to stop."
     await event.edit(tempu,
+                     buttons=[
+                         [Button.inline("ϐαϲκ", data="2")]
+                     ])
+
+@ATGK.on(events.callbackquery.CallbackQuery(data="mspam"))
+async def ex(event):
+    achdh="➽ tag any media & Do /mspam number \nLiMiT Depend on number \nJust Do /restart to stop."
+    await event.edit(achdh,
                      buttons=[
                          [Button.inline("ϐαϲκ", data="2")]
                      ])
