@@ -66,13 +66,13 @@ async def uspammer(e):
         await asyncio.sleep(1.95)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/mspam"))
-async def m_spam(e):
+async def mediaspam(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you have no control on me (sed)")
   if str(e.sender_id) in BOT_USERS:
     try:
         reply = await e.get_reply_message()
-     if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
+  if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         text = message.split()
         counter = int(text[1])
