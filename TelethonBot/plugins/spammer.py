@@ -71,7 +71,10 @@ async def tiny_pic_spam(e):
     return await e.reply("kid you have no control on me (sed)")
   if str(e.sender_id) in BOT_USERS:
     try:
-        reply = await e.get_reply_message()
+      reply = await e.get_reply_message()
+    except:
+      await event.respond("Something getting wrong")
+      return "Fuck Off"
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
         message = e.text
         text = message.split()
