@@ -66,7 +66,7 @@ async def uspammer(e):
         await asyncio.sleep(1.95)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/mspam"))
-async def media_spammer(e):
+async def mspammer(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you have no control on me (sed)")
   if str(e.sender_id) in BOT_USERS:
