@@ -69,16 +69,17 @@ async def uspammer(e):
 async def m_spam(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you have no control on me (sed)")
-  else:
+  if str(e.sender_id) in BOT_USERS:
     try:
-  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-    counter = int(e.pattern_match.group(1).split(' ', 1)[0])
-    reply_message = await e.get_reply_message() 
-  if not reply_message or not e.reply_to_msg_id or not reply_message.media or not reply_message.media:
-       return await e.edit("```Reply to a pic/sticker/gif/video message```")
-    message = reply_message.media
-    for i in range(1, counter):
-        await e.client.send_file(e.chat_id, message)
+  reply = await e.get_reply_message()
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        message = e.text
+        text = message.split()
+        counter = int(text[1])
+        media = await e.client.download_media(reply)
+        for i in range(1, counter):
+            await e.client.send_file(e.chat_id, media)
+        await e.delete()
         if LOGGER_GROUP:
             await e.client.send_message(
                 LOGGER_GROUP,
