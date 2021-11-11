@@ -66,7 +66,7 @@ async def uspammer(e):
         await asyncio.sleep(1.95)
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/mspam"))
-async def any_pic_spammer(e):
+async def tiny_pic_spam(e):
   if not str(e.sender_id) in BOT_USERS:
     return await e.reply("kid you have no control on me (sed)")
   if str(e.sender_id) in BOT_USERS:
@@ -94,7 +94,7 @@ async def restart(e):
     return await e.reply("kid you are not my owner (sed)")
   if str(e.sender_id) in BOT_USERS:
     try:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait a min 😲😬..."
+        text = "ReSTaRTeD\n\nWaiT A Few Seconds 😬😲😬..."
         await e.reply(text, parse_mode=None, link_preview=None)
         await ATGK.disconnect()
     except Exception:
