@@ -111,13 +111,13 @@ async def restart(e):
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
-sudousers = BOT_USERS
+sudousers = BOT_USER
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/addsudo"))
 async def tb(event):
     if event.sender_id == OWNER_ID:
         ok = await event.reply("Adding user as a sudo...")
-        rizoel = "BOT_USERS"
+        rizoel = "BOT_USER"
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
         else:
