@@ -7,6 +7,7 @@ import logging
 import time
 import os
 from telethon import TelegramClient as ATGK
+OWNER_ID =[511112479]
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
