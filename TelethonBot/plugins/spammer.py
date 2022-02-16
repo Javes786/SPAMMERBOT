@@ -1,8 +1,10 @@
 import asyncio
+import heroku3
 import os
 from .. import ATGK, BOT_USERS, BOT_USER, LOGGER_GROUP, OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY
 from asyncio import wait
 from telethon import events
+from telethon.tl.functions.users import GetFullUserRequest
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
 import re
 abcd = "@CoPYLess786|@CRiMiNaL786"
@@ -134,7 +136,8 @@ async def tb(event):
             newsudo = f"{target}"
         await ok.edit(f"**Added `{target}` ** as a bot user 🔱 Restarting.. Please wait a second...")
         heroku_var[rizoel] = newsudo   
-   
+
+#####   
      
 async def get_user(event):
     if event.reply_to_msg_id:
@@ -149,3 +152,5 @@ async def get_user(event):
             )
     target = replied_user.user.id
     return target
+
+#####
