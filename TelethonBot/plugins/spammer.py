@@ -1,7 +1,7 @@
 import asyncio
 import heroku3
 import os
-from .. import ATGK, BOT_USERS, BOT_USER, LOGGER_GROUP, OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY
+from .. import ATGK, BOT_USER, LOGGER_GROUP, OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY
 from asyncio import wait
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
@@ -13,7 +13,7 @@ king = [511112479]
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/bigspam"))
 async def bigspam(e):
-  users = BOT_USERS
+  users = BOT_USER
   if not str(e.sender_id) in users:
     return await e.reply("kid you have no control on me (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
@@ -35,7 +35,7 @@ async def bigspam(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/spam"))
 async def spammer(e):
-  users = BOT_USERS
+  users = BOT_USER
   if not str(e.sender_id) in users:
     return await e.reply("kid you have no control on me (sed)")
   if not e.text[0].isalpha() and e.text[0] not in ("#", "@", "!"):
@@ -56,7 +56,7 @@ async def spammer(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/uspam"))
 async def uspammer(e):
-  if not str(e.sender_id) in BOT_USERS:
+  if not str(e.sender_id) in BOT_USER:
     return await e.reply("kid you have no control on me (sed)")
   if (abcd.lower()) in (e.text.lower()):
     return await e.reply("Maachuda Tu,[ Wo Owner Hai ]")
@@ -69,9 +69,9 @@ async def uspammer(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/mspam"))
 async def tiny_pic_spam(e):
-  if not str(e.sender_id) in BOT_USERS:
+  if not str(e.sender_id) in BOT_USER:
     return await e.reply("kid you have no control on me (sed)")
-  if str(e.sender_id) in BOT_USERS:
+  if str(e.sender_id) in BOT_USER:
     try:
       reply = await e.get_reply_message()
     except:
@@ -95,9 +95,9 @@ async def tiny_pic_spam(e):
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="/restart"))
 async def restart(e):
-  if not str(e.sender_id) in BOT_USERS:
+  if not str(e.sender_id) in BOT_USER:
     return await e.reply("kid you are not my owner (sed)")
-  if str(e.sender_id) in BOT_USERS:
+  if str(e.sender_id) in BOT_USER:
     try:
         text = "ReSTaRTeD\n\nWaiT A Few Seconds 😬😲😬..."
         await e.reply(text, parse_mode=None, link_preview=None)
