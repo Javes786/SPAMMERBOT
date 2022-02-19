@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 from telethon import events
-from .. import ATGK, Lastupdate, BOT_USERS, BOT_USER
+from .. import ATGK, Lastupdate, BOT_USER
 
 
 
@@ -35,7 +35,7 @@ def get_readable_time(seconds: int) -> str:
 
 @ATGK.on(events.NewMessage(incoming=True, pattern="^/ping"))
 async def ping(e):
- if not str(e.sender_id) in BOT_USERS:
+ if not str(e.sender_id) in BOT_USER:
     return await e.reply("kid you are not my owner (sed)")
  else:
     start = datetime.now()
