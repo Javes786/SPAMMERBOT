@@ -23,7 +23,7 @@ BOT_TOKEN = config("BOT_TOKEN", default=None)
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = config("HEROKU_API_KEY", None)
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
-OWNER_ID = int(os.environ.get("OWNER_ID", None))
+OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
 BOT_USER = set(int(x) for x in os.environ.get("BOT_USER", "").split())
 
 ALIVE_NAME = os.environ.get("ALIVE_NAME", "DICTATOR AMAAN")
