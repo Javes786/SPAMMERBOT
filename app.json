@@ -10,7 +10,7 @@
     ],
     "repository": "https://github.com/Javes786/SPAMMERBOT",
     "website": "https://t.me/Criminal786",
-    "success_url": "https://t.me/Javes2Support",
+    "success_url": "https://t.me/DESTROYXSupport",
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
