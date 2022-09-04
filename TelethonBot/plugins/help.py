@@ -84,7 +84,7 @@ async def ex(event):
 
 @ATGK.on(events.callbackquery.CallbackQuery(data="mspam"))
 async def ex(event):
-    achdh="➽ tag any media & Do /mspam number \nLiMiT Depend on number \nJust Do /restart to stop."
+    achdh="➽ Tag any media & Do /mspam number \nLiMiT Depend on number \nJust Do /restart to stop."
     await event.edit(achdh,
                      buttons=[
                          [Button.inline("ϐαϲκ", data="2")]
