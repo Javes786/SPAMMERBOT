@@ -107,50 +107,5 @@ async def restart(e):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
-# CODE TAKEN FROM RIZOEL [ FULL CREDIT TO RIZOEL OWNER ]
-
-Heroku = heroku3.from_key(HEROKU_API_KEY)
-heroku_api = "https://api.heroku.com"
-sudousers = BOT_USER
-
-@ATGK.on(events.NewMessage(incoming=True, pattern="/addsudo"))
-async def tb(event):
-    if event.sender_id == OWNER_ID:
-        ok = await event.reply("Adding user as a sudo...")
-        rizoel = "BOT_USER"
-        if HEROKU_APP_NAME is not None:
-            app = Heroku.app(HEROKU_APP_NAME)
-        else:
-            await ok.edit("`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**")
-            return
-        heroku_var = app.config()
-        if event is None:
-            return
-        try:
-            target = await get_user(event)
-        except Exception:
-            await ok.edit(f"Reply to a user.")
-        if sudousers:
-            newsudo = f"{sudousers} {target}"
-        else:
-            newsudo = f"{target}"
-        await ok.edit(f"**Added `{target}` ** as a bot user 🔱 Restarting.. Please wait a second...")
-        heroku_var[rizoel] = newsudo   
-
-#####   
-     
-async def get_user(event):
-    if event.reply_to_msg_id:
-        previous_message = await event.get_reply_message()
-        if previous_message.forward:
-            replied_user = await event.client(
-                GetFullUserRequest(previous_message.forward.sender_id)
-            )
-        else:
-            replied_user = await event.client(
-                GetFullUserRequest(previous_message.sender_id)
-            )
-    target = replied_user.user.id
-    return target
-
-#####
+    
+###############################     END     ############################    
