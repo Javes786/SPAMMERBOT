@@ -1,7 +1,6 @@
 import asyncio
-import heroku3
 import os
-from .. import ATGK, BOT_USER, LOGGER_GROUP, OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY
+from .. import ATGK, BOT_USER, LOGGER_GROUP
 from asyncio import wait
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
