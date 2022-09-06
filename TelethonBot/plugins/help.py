@@ -53,7 +53,8 @@ async def ex(event):
     await event.edit(text4,
                      buttons=[
                          [Button.url("ϲнαииєℓ", url="https://t.me/destroyxofficial")],
-                         [Button.url("gяουρ", url="https://t.me/DesTRoYxsupport")],
+                         [Button.url("sմթթօɾԵ gяουρ", url="https://t.me/DesTRoYxsupport")],
+                         [Button.url("яєρο", url="https://github.com/Javes786/SPAMMERBOT")],
                          [Button.url("gινє α sԵαɾ ⭐", url="https://github.com/CRiMiNaL786")],
                          [Button.inline("ϐαϲκ", data="helpme")]
                      ])
