@@ -12,7 +12,7 @@ amaan786 = os.environ.get("PM_IMG", None)
 if not amaan786:
  amaan786 = "https://telegra.ph/file/9a55abc7b250a0b9ae7f9.jpg"
 pm_caption = "• **Sᴘᴀᴍᴍᴇʀ ɪs:** `Oɴʟɪɴᴇ`\n\n"
-pm_caption += f"• **Pʏᴛʜᴏɴ:** `{python_version}` \n"
+pm_caption += f"• **Pʏᴛʜᴏɴ:** {python_version} \n"
 pm_caption += "• **Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛᴜs:**  `Fᴜɴᴄᴛɪᴏɴᴀʟ`\n"
 pm_caption += "• **Cᴜʀʀᴇɴᴛ Bʀᴀɴᴄʜ** : `ตαsԵҽɾ`\n"
 pm_caption += f"• **Wᴏʀᴋᴇʀ Oғ** : {ALIVE_NAME} \n"
