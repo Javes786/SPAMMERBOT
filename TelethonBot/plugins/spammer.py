@@ -6,7 +6,7 @@ from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 LOGGER_GROUP = int(os.environ.get("LOGGER_GROUP", None))
 import re
-abcd = "@AMAANTGK|@CRiMiNaL786"
+abcd = "@AMAANTGK|@CRiMiNaL786|@NoorXd786"
 x = "@LEGENDX90"
 king = [511112479]
 
